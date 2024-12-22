@@ -47,7 +47,7 @@ public class AddMatch extends HttpServlet {
             try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
                 // Kiểm tra nếu đội chủ nhà và đội khách giống nhau
                 if (homeTeamId == awayTeamId) {
-                    response.sendRedirect("MatchManagement.jsp?season_id=" + seasonId + "&error=Đội chủ nhà và đội khách không được trùng!");
+                    response.sendRedirect("MatchManagement.jsp?season_id=" + seasonId);
                     return;
                 }
 
